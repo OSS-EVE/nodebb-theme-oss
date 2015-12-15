@@ -1,14 +1,14 @@
 {
-  "name": "nodebb-theme-creepr",
-  "version": "3.1.10",
+  "name": "nodebb-theme-oss",
+  "version": "4.0.44",
   "nbbpm": {
-    "compatibility": "^0.8.2"
+    "compatibility": "^0.8.2 || ^0.9.0"
   },
-  "description": "Creepr theme for NodeBB built on Persona",
+  "description": "OSS theme for NodeBB built on Creepr",
   "main": "theme.less",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Creepr/nodebb-theme-creepr.git"
+    "url": "git+https://git.oss.rocks/oss/nodebb-theme-oss.git"
   },
   "keywords": [
     "nodebb",
@@ -37,18 +37,23 @@
       "name": "Samuel Roth",
       "email": "s-roth@onu.edu",
       "url": "https://github.com/sejr"
+    },
+    {
+      "name": "Yohann Gely",
+      "email": "yohann.gely@gmail.com",
+      "url": ""
     }
   ],
   "license": "BSD-2-Clause",
   "bugs": {
-    "url": "https://github.com/Creepr/nodebb-theme-creepr/issues"
+    "url": "https://git.oss.rocks/oss/nodebb-theme-oss/issues"
   },
-  "readme": "Creepr theme for NodeBB\n====================\n\nCreepr, based on Persona, is a custom theme for the Creepr Network. \n\n## Addons\n\n[Recent Cards](https://github.com/psychobunny/nodebb-plugin-recent-cards)\n\n## Screenshots\n\n![](https://d2gn4xht817m0g.cloudfront.net/p/product_screenshots/images/original/000/570/286/570286-db378dfd28256a8fabacc9129b3638dc678ac393.png?1439315393)\n\n<br />\n![](https://d2gn4xht817m0g.cloudfront.net/p/product_screenshots/images/original/000/570/287/570287-5875c63ce086d361b76d94e5bc7cc88a5fd34b8b.png?1439315419)\n",
+  "readme": "OSS theme for NodeBB\n====================\n\nOSS, based on Creepr, is a custom theme for OSS alliance. \n\n## Addons\n\n[Recent Cards](https://github.com/psychobunny/nodebb-plugin-recent-cards)\n\n## Screenshots\n\n![](https://d2gn4xht817m0g.cloudfront.net/p/product_screenshots/images/original/000/570/286/570286-db378dfd28256a8fabacc9129b3638dc678ac393.png?1439315393)\n\n<br />\n![](https://d2gn4xht817m0g.cloudfront.net/p/product_screenshots/images/original/000/570/287/570287-5875c63ce086d361b76d94e5bc7cc88a5fd34b8b.png?1439315419)\n",
   "readmeFilename": "README.md",
   "gitHead": "60bc9806d657622153deabde6da6cdaa6f4207af",
-  "homepage": "https://github.com/Creepr/nodebb-theme-creepr#readme",
-  "_id": "nodebb-theme-creepr@3.0.74",
+  "homepage": "https://git.oss.rocks/oss/nodebb-theme-oss",
+  "_id": "nodebb-theme-oss@4.0.44",
   "scripts": {},
   "_shasum": "54bc89cabd43393d868abfa2cb3a95ab93b7e2d2",
-  "_from": "nodebb-theme-creepr@>=3.0.54 <4.0.0"
+  "_from": "nodebb-theme-oss@>=4.0.44"
 }

@@ -1,7 +1,7 @@
 {
-    "id": "nodebb-theme-creepr",
-    "name": "Creepr",
-    "description": "The default theme for the Creepr Forum. Uses a standard approach to forum design. Based on psychobunny's Persona.",
-    "url": "https://github.com/Creepr/nodebb-theme-creepr",
+    "id": "nodebb-theme-oss",
+    "name": "OSS",
+    "description": "The default theme for the OSS Forum. Uses a standard approach to forum design. Based on psychobunny's Persona.",
+    "url": "https://git.oss.rocks/oss/nodebb-theme-oss.git",
     "screenshot": "screenshot.png"
 }

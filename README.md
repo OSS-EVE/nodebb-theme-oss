@@ -1,7 +1,7 @@
-Creepr theme for NodeBB
+OSS theme for NodeBB
 ====================
 
-Creepr, based on Persona, is a custom theme for the Creepr Network. 
+OSS, based on Creepr is a custom theme for OSS alliance. 
 
 ## Addons
 
