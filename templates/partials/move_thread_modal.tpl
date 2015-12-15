@@ -6,8 +6,7 @@
 				<h3>[[topic:move_topic]]</h3>
 			</div>
 			<div class="modal-body">
-				<!-- IMPORT partials/category_list.tpl -->
-
+				<p id="categories-loading"><i class="fa fa-spin fa-refresh"></i> [[topic:load_categories]]</p>
 				<p>
 					[[topic:disabled_categories_note]]
 				</p>
