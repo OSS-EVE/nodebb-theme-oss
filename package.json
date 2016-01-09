@@ -1,14 +1,14 @@
 {
-  "name": "nodebb-theme-persona",
+  "name": "nodebb-theme-oss",
   "version": "4.0.55",
   "nbbpm": {
     "compatibility": "^0.8.2 || ^0.9.0"
   },
-  "description": "Persona theme for NodeBB",
+  "description": "Oss theme for NodeBB",
   "main": "theme.less",
   "repository": {
     "type": "git",
-    "url": "https://github.com/psychobunny/nodebb-theme-persona"
+    "url": "https://git.oss.rocks/oss/nodebb-theme-oss"
   },
   "keywords": [
     "nodebb",
@@ -32,10 +32,15 @@
       "name": "Barış Soner Uşaklı",
       "email": "baris@designcreateplay.com",
       "url": "https://github.com/barisusakli"
+    },
+    {
+      "name": "yohlane aka riukkie",
+      "email": "yohlana@gmail.com",
+      "url": ""
     }
   ],
   "license": "BSD-2-Clause",
   "bugs": {
-    "url": "https://github.com/psychobunny/nodebb-theme-persona/issues"
+    "url": "https://git.oss.rocks/oss/nodebb-theme-oss/issues"
   }
 }

@@ -1,7 +1,7 @@
-Persona theme for NodeBB
+Oss theme for NodeBB
 ====================
 
-Persona is the new default theme for NodeBB as of v0.7.1
+OSS, based on Persona is a custom theme for OSS alliance.
 
 ## Addons
 
