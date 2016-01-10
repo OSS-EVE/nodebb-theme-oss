@@ -3,5 +3,6 @@
     "name": "Oss",
     "description": "OSS, based on Persona is a custom theme for OSS alliance.",
     "url": "https://git.oss.rocks/oss/nodebb-theme-oss",
-    "screenshot": "screenshot.png"
+    "screenshot": "screenshot.png",
+    "baseTheme": "nodebb-theme-persona"
 }
