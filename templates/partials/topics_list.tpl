@@ -65,7 +65,7 @@
 
 		<div class="col-md-2 hidden-sm hidden-xs stats">
 			<span class="human-readable-number" title="{topics.postcount}">{topics.postcount}</span>
-			<small>[[global:posts]]</small>/
+			<small>[[global:posts]]</small> /
 			<span class="human-readable-number" title="{topics.viewcount}">{topics.viewcount}</span>
 			<small>[[global:views]]</small>
 		</div>
