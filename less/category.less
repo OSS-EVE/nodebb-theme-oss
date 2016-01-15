@@ -1,0 +1,38 @@
+.category {
+	> ul {
+		> li {
+			.content {
+				img, .user-icon {
+					width: 32px;
+					height: 32px;
+					line-height: 32px;
+					padding-left: 2px;
+				}
+			}
+			h2.title {
+				small{
+					padding-top: 9px;
+					a{
+						font-weight: bolder;
+						text-decoration: underline;
+						color: #7a8288 !important;
+					}
+				}
+			}
+			h2.title.pinned > a{
+				color: white !important;
+			}
+			.select{
+				.fa-check{
+					height: 32px;
+					width: 32px;
+				}
+				.fa-check:before{
+					position: relative;
+					bottom: 6px;
+					right: 6px;
+				}
+			}
+		}
+	}
+}

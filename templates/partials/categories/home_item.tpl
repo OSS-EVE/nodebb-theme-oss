@@ -8,7 +8,7 @@
 
 		<h2 class="title">
 			<!-- IMPORT partials/categories/link.tpl -->
-			<span class="description">
+			<span class="description pull-right">
 			{../description}
 			</span>
 		</h2>

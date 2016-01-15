@@ -4,6 +4,6 @@
 	<!-- BEGIN categories -->
 		<!-- IMPORT partials/categories/home_item.tpl -->
 		<!-- IMPORT partials/category/subcategory.tpl -->
-		<hr/>
+		<hr class="hidden-xs"/>
 	<!-- END categories -->
 </ul>
