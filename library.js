@@ -42,7 +42,13 @@
 	Widget.renderOssOpsWidget = function(widget, callback) {
 		function extractDate(slug){
 			var tmp = slug.split("/")[1].split("-")
-			return tmp.slice(0, 3).reverse().join('') + tmp[3];
+			return new Date(
+				tmp[2],
+				tmp[1]-1,
+				tmp[0],
+				tmp[3].slice(0, 2),
+				tmp[3].slice(2)
+			);
 		}
 		privileges.categories.get(widget.data.cid, widget.uid, function(err, data) {
 			if(data.read){
@@ -66,15 +72,25 @@
 							return a.slug.split("/")[1] - b.slug.split("/")[1];
 						}
 					});
+					//console.log(Date.getTimezoneOffset());
+
 					var modifiedTopics = []
-					data.topics.slice(0, (widget.data.numTopics ? widget.data.numTopics : 5)).forEach(function(entry) {
+					data.topics.forEach(function(entry) {
 						if(entry.title.split(" ").reverse()[0] == "!"){
 							entry.important = true;
 							entry.title = entry.title.slice(0, -1);
 						}
 						else
 							entry.important = false;
-						modifiedTopics.push(entry);
+						try{
+							entry.date = (entry.slug && !isNaN(extractDate(entry.slug))) ? extractDate(entry.slug).getTime() : 0;
+						}
+						catch(err) {
+							entry.date = 0;
+						}
+						if(modifiedTopics.length < (widget.data.numTopics ? widget.data.numTopics : 5)&&
+							  entry.date > Date.now())
+							modifiedTopics.push(entry);
 					});
 					app.render('widgets/opswidget', {
 						topics: modifiedTopics,
