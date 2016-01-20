@@ -1,123 +1,38 @@
 .category {
 	> ul {
 		> li {
-			list-style: none;
-
-			&:not(.unread) {
-				.card {
-					border-color: lighten(@gray-light, 20%) !important;
-				}
-
-				h2 a {
-					color: @gray !important;
+			.content {
+				img, .user-icon {
+					width: 32px;
+					height: 32px;
+					line-height: 32px;
+					padding-left: 2px;
 				}
 			}
-
-			&.deleted {
-				-moz-opacity: 0.30;
-				opacity: 0.30;
-			}
-
-			.select {
-				position: relative;
-				.pointer;
-
-				&:before {
-					content: "";
-					display: none;
-				}
-
-				.fa-check {
-					border: 1px solid @brand-success;
-					color: @brand-success;
-					padding: 14px;
-					border-radius: 50%;
-					position: absolute;
-					font-size: 15px;
-					opacity: 0;
-					top: 0px;
-
-					&:before {
-						.pointer;
+			h2.title {
+				small{
+					padding-top: 9px;
+					a{
+						font-weight: bolder;
+						text-decoration: underline;
+						color: #7a8288 !important;
 					}
 				}
-
-				.user-img {
-					opacity: 1;
-				}
-
-				.fa-check, .user-img {
-					.transition(.2s ease-in-out opacity);
-				}
-
-				float: left;
 			}
-
-			&.selected {
-				.user-img {
-					opacity: 0;
-				}
-
-				.fa-check {
-					opacity: 1;
-				}
+			h2.title.pinned > a{
+				color: white !important;
 			}
-
-			.tag-list {
-				.tag {
-					text-transform: uppercase;
-					font-size: 10px;
-					background: lighten(@gray-lighter, 2.5%);
-					padding: 5px;
-					white-space: nowrap;
+			.select{
+				.fa-check{
+					height: 32px;
+					width: 32px;
 				}
-			}
-
-			.fa-stack {
-				font-size: 90%;
+				.fa-check:before{
+					position: relative;
+					bottom: 6px;
+					right: 6px;
+				}
 			}
 		}
-
-		&:last-child li {
-			border-bottom: 0;
-		}
 	}
-
-	.unread {
-		.topic-title {
-			font-weight: bold;
-		}
-	}
-
-
-}
-
-.category, .categories, .subcategory {
-	> p {
-		text-transform: uppercase;
-		color: @gray-light;
-	}
-
-	h2.title p {
-		font-size: 65%;
-		font-weight: normal;
-		line-height: 1;
-		color: @gray-light;
-	}
-
-	h4.title p {
-		font-size: 65%;
-		font-weight: normal;
-		line-height: 1;
-		color: @gray-light;
-	}
-}
-
-.categories-title {
-	text-transform: uppercase;
-	color: @gray-light;
-	margin: 0 0 10px;
-	font-size: 14px;
-	font-weight: normal;
-	line-height: 1.42857143;
 }

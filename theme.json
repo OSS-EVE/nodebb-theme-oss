@@ -1,7 +1,8 @@
 {
     "id": "nodebb-theme-oss",
-    "name": "OSS",
-    "description": "The default theme for the OSS Forum. Uses a standard approach to forum design. Based on psychobunny's Persona.",
-    "url": "https://git.oss.rocks/oss/nodebb-theme-oss.git",
-    "screenshot": "screenshot.png"
+    "name": "Oss",
+    "description": "OSS, based on Persona is a custom theme for OSS alliance.",
+    "url": "https://git.oss.rocks/oss/nodebb-theme-oss",
+    "screenshot": "screenshot.png",
+    "baseTheme": "nodebb-theme-persona"
 }

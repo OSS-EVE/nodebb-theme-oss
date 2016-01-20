@@ -4,15 +4,14 @@
 	<div component="category/posts">
 		<p>
 			<a class="permalink" href="{config.relative_path}/topic/{../topic.slug}<!-- IF ../index -->/{../index}<!-- ENDIF ../index -->"><strong>{../topic.title}</strong></a><br>
-			<span class="timeago" title="{../relativeTime}"></span> by <a href="{config.relative_path}/user/{../user.username}">{../user.username}</a>
+			<span class="timeago" title="{../relativeTime}"></span> by <a href="{config.relative_path}/user/{../user.userslug}">{../user.username}</a>
 		</p>
 		<div class="post-content">
-			{../content}
+			
 		</div>
 	</div>
 	<!-- ENDIF @first -->
 	<!-- END posts -->
-
 	<!-- IF !../posts.length -->
 	<div component="category/posts">
 		<div class="post-content">

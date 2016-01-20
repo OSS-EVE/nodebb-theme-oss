@@ -1,7 +1,7 @@
-OSS theme for NodeBB
+Oss theme for NodeBB
 ====================
 
-OSS, based on Creepr is a custom theme for OSS alliance. 
+OSS, based on Persona is a custom theme for OSS alliance.
 
 ## Addons
 

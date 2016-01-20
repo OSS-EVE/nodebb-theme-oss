@@ -1,14 +1,14 @@
 {
   "name": "nodebb-theme-oss",
-  "version": "4.0.44",
+  "version": "4.0.55",
   "nbbpm": {
     "compatibility": "^0.8.2 || ^0.9.0"
   },
-  "description": "OSS theme for NodeBB built on Creepr",
+  "description": "Oss theme for NodeBB",
   "main": "theme.less",
   "repository": {
     "type": "git",
-    "url": "git+https://git.oss.rocks/oss/nodebb-theme-oss.git"
+    "url": "https://git.oss.rocks/oss/nodebb-theme-oss"
   },
   "keywords": [
     "nodebb",
@@ -34,26 +34,13 @@
       "url": "https://github.com/barisusakli"
     },
     {
-      "name": "Samuel Roth",
-      "email": "s-roth@onu.edu",
-      "url": "https://github.com/sejr"
-    },
-    {
-      "name": "Yohann Gely",
-      "email": "yohann.gely@gmail.com",
+      "name": "yohlane aka riukkie",
+      "email": "yohlana@gmail.com",
       "url": ""
     }
   ],
   "license": "BSD-2-Clause",
   "bugs": {
     "url": "https://git.oss.rocks/oss/nodebb-theme-oss/issues"
-  },
-  "readme": "OSS theme for NodeBB\n====================\n\nOSS, based on Creepr, is a custom theme for OSS alliance. \n\n## Addons\n\n[Recent Cards](https://github.com/psychobunny/nodebb-plugin-recent-cards)\n\n## Screenshots\n\n![](https://d2gn4xht817m0g.cloudfront.net/p/product_screenshots/images/original/000/570/286/570286-db378dfd28256a8fabacc9129b3638dc678ac393.png?1439315393)\n\n<br />\n![](https://d2gn4xht817m0g.cloudfront.net/p/product_screenshots/images/original/000/570/287/570287-5875c63ce086d361b76d94e5bc7cc88a5fd34b8b.png?1439315419)\n",
-  "readmeFilename": "README.md",
-  "gitHead": "60bc9806d657622153deabde6da6cdaa6f4207af",
-  "homepage": "https://git.oss.rocks/oss/nodebb-theme-oss",
-  "_id": "nodebb-theme-oss@4.0.44",
-  "scripts": {},
-  "_shasum": "54bc89cabd43393d868abfa2cb3a95ab93b7e2d2",
-  "_from": "nodebb-theme-oss@>=4.0.44"
+  }
 }

@@ -24,7 +24,9 @@
 		{../totalTopicCount} <small>[[global:topics]]</small> / {../totalPostCount} <small>[[global:posts]]</small>
 	</div>
 	<!-- ENDIF !../link -->
-	<div class="col-md-3 col-sm-3 col-xs-1 teaser hidden-xs">
-		<!-- IMPORT partials/categories/lastpost.tpl -->
-	</div>
+	<!-- IF !children.length -->
+		<div class="col-md-3 col-sm-3 col-xs-1 teaser hidden-xs">
+			<!-- IMPORT partials/categories/lastpost.tpl -->
+		</div>
+	<!-- ENDIF !children.length -->
 </li>
