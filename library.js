@@ -40,6 +40,10 @@
 	};
 
 	Widget.renderOssOpsWidget = function(widget, callback) {
+		function extractDate(slug){
+			var tmp = slug.split("/")[1].split("-")
+			return tmp.slice(0, 3).reverse().join('') + tmp[3];
+		}
 		privileges.categories.get(widget.data.cid, widget.uid, function(err, data) {
 			if(data.read){
 				categories.getCategoryTopics({
@@ -53,8 +57,27 @@
 					if (err) {
 						return callback(err);
 					}
+
+					data.topics.sort(function(a,b) { 
+						try {
+							return extractDate(a.slug) - extractDate(b.slug);
+						}
+						catch(err) {
+							return a.slug.split("/")[1] - b.slug.split("/")[1];
+						}
+					});
+					var modifiedTopics = []
+					data.topics.slice(0, (widget.data.numTopics ? widget.data.numTopics : 5)).forEach(function(entry) {
+						if(entry.title.split(" ").reverse()[0] == "!"){
+							entry.important = true;
+							entry.title = entry.title.slice(0, -1);
+						}
+						else
+							entry.important = false;
+						modifiedTopics.push(entry);
+					});
 					app.render('widgets/opswidget', {
-						topics: data.topics,
+						topics: modifiedTopics,
 						relative_path: nconf.get('relative_path')
 					}, callback);
 				});
