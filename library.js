@@ -43,11 +43,11 @@
 		function extractDate(slug){
 			var tmp = slug.split("/")[1].split("-")
 			return new Date(
-				tmp[2],
-				tmp[1]-1,
 				tmp[0],
-				tmp[3].slice(0, 2),
-				tmp[3].slice(2)
+				tmp[1]-1,
+				tmp[2],
+				tmp[3],
+				tmp[4]
 			);
 		}
 		privileges.categories.get(widget.data.cid, widget.uid, function(err, data) {

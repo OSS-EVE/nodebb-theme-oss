@@ -9,7 +9,7 @@
 			var Date{topics.tid} = {topics.date};
 			setInterval(function(){
 				if(Date{topics.tid} > 0){
-					document.getElementById("eta-{topics.tid}").innerHTML = "In " + msToTime(Date{topics.tid} - Date.now())
+					document.getElementById("eta-{topics.tid}").innerHTML = msToTime(Date{topics.tid} - Date.now())
 				}
 			}, 1000);
 		</script>
