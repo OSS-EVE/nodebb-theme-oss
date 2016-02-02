@@ -78,15 +78,8 @@
 				</p>
 				<!-- ELSE -->
 				<p>
-					<a href="{config.relative_path}/user/{topics.teaser.user.userslug}">
-						<!-- IF topics.teaser.user.picture -->
-						<img title="{topics.teaser.user.username}" class="user-img" src="{topics.teaser.user.picture}" />
-						<!-- ELSE -->
-						<span title="{topics.teaser.user.username}" class="user-icon user-img" style="background-color: {topics.teaser.user.icon:bgColor};">{topics.teaser.user.icon:text}</span>
-						<!-- ENDIF topics.teaser.user.picture -->
-					</a>
 					<a class="permalink" href="{config.relative_path}/topic/{topics.slug}/{topics.teaser.index}">
-						<span class="timeago" title="{topics.teaser.timestamp}"></span>
+						<span class="timeago" title="{topics.teaser.timestamp}"></span> by <a href="{config.relative_path}/user/{../user.userslug}">{../user.username}</a>
 					</a>
 				</p>
 				<div class="post-content">
