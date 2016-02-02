@@ -1,9 +1,9 @@
 <!-- IMPORT partials/breadcrumbs.tpl -->
-<h1 class="categories-title">[[pages:categories]]</h1>
 <ul class="categories" itemscope itemtype="http://www.schema.org/ItemList">
 	<!-- BEGIN categories -->
+	<li component="categories/category" data-cid="{../cid}" data-numRecentReplies="1" class="clearfix panel">
 		<!-- IMPORT partials/categories/home_item.tpl -->
 		<!-- IMPORT partials/category/subcategory.tpl -->
-		<hr class="hidden-xs"/>
+	</li>
 	<!-- END categories -->
 </ul>

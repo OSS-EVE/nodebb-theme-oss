@@ -1,6 +1,17 @@
 {
 	"id": "nodebb-theme-oss",
-	"hooks": [],
+	"library": "./library.js",
+	"hooks": [
+		{
+			"hook": "static:app.load", "method": "init"
+		},
+		{
+			"hook": "filter:widgets.getWidgets", "method": "defineWidgets", "callbacked": true
+		},
+		{
+			"hook": "filter:widget.render:ossops", "method": "renderOssOpsWidget"
+		}
+	],
 	"scripts": [
 		"lib/persona.js",
 		"lib/modules/nprogress.js",

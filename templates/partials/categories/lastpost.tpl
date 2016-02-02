@@ -2,10 +2,8 @@
 	<!-- BEGIN posts -->
 	<!-- IF @first -->
 	<div component="category/posts">
-		<p>
-			<a class="permalink" href="{config.relative_path}/topic/{../topic.slug}<!-- IF ../index -->/{../index}<!-- ENDIF ../index -->"><strong>{../topic.title}</strong></a><br>
-			<span class="timeago" title="{../relativeTime}"></span> by <a href="{config.relative_path}/user/{../user.userslug}">{../user.username}</a>
-		</p>
+		<a class="permalink" href="{config.relative_path}/topic/{../topic.slug}<!-- IF ../index -->/{../index}<!-- ENDIF ../index -->"><strong>{../topic.title}</strong></a><br>
+		<span class="timeago" title="{../relativeTime}"></span> by <a href="{config.relative_path}/user/{../user.userslug}">{../user.username}</a>
 		<div class="post-content">
 			
 		</div>
