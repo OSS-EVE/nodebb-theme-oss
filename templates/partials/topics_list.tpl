@@ -35,20 +35,26 @@
 				{topics.title}
 				<!-- ENDIF !topics.noAnchor -->
 
-				<!-- IF !template.category -->
-				<small>
-					<a href="{config.relative_path}/category/{topics.category.slug}"><span class="fa-stack fa-lg"><i style="color:{topics.category.bgColor};"class="fa fa-circle fa-stack-2x"></i><i style="color:{topics.category.color};" class="fa {topics.category.icon} fa-stack-1x"></i></span> {topics.category.name}</a> &bull;
-				</small>
-				<!-- ENDIF !template.category -->
-
 				<span class="tag-list hidden-xs">
+					<!-- IF template.category -->
 					<!-- BEGIN tags -->
 					<a href="{config.relative_path}/tags/{topics.tags.value}"><span class="tag" style="<!-- IF topics.tags.color -->color: {topics.tags.color};<!-- ENDIF topics.tags.color --><!-- IF topics.tags.bgColor -->background-color: {topics.tags.bgColor};<!-- ENDIF topics.tags.bgColor -->">{topics.tags.value}</span></a>
 					<!-- END tags -->
-					<!-- IF topics.tags.length --><small>&bull;</small><!-- ENDIF topics.tags.length -->
+					<!-- ENDIF template.category -->
 				</span>
+				<div class="hidden-xs pull-right">
+					
+					<!-- IF !template.category -->
+					<small>
+						<a href="{config.relative_path}/category/{topics.category.slug}">{topics.category.name}</a> &bull;
+					</small>
+					<!-- ENDIF !template.category -->
+					<small><span class="timeago" title="{topics.relativeTime}"></span> by <a href="{config.relative_path}/user/{topics.user.userslug}">{../user.username}</a></small>
 
-				<small class="hidden-xs pull-right"><span class="timeago" title="{topics.relativeTime}"></span> by <a href="{config.relative_path}/user/{topics.user.userslug}">{../user.username}</a></small>
+				</div>
+				
+
+
 				<small class="visible-xs-inline">
 					<!-- IF topics.teaser.timestamp -->
 					<span class="timeago" title="{topics.teaser.timestamp}"></span>
@@ -56,6 +62,7 @@
 					<span class="timeago" title="{topics.relativeTime}"></span>
 					<!-- ENDIF topics.teaser.timestamp -->
 				</small>
+
 			</h2>
 		</div>
 
@@ -79,8 +86,8 @@
 				<!-- ELSE -->
 				<p>
 					<a class="permalink" href="{config.relative_path}/topic/{topics.slug}/{topics.teaser.index}">
-						<span class="timeago" title="{topics.teaser.timestamp}"></span> by <a href="{config.relative_path}/user/{../user.userslug}">{../user.username}</a>
-					</a>
+						<span class="timeago" title="{topics.teaser.timestamp}"></span> 
+					</a> by <a href="{config.relative_path}/user/{../user.userslug}">{../user.username}</a>
 				</p>
 				<div class="post-content">
 					{topics.teaser.content}
