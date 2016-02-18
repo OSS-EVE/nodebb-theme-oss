@@ -1,21 +1,27 @@
-<ul class="ops">
-<!-- BEGIN topics -->
-	<li class="row <!-- IF topics.important -->important<!-- ENDIF topics.important -->" >
-		<a href="{relative_path}/topic/{topics.slug}">
-			<p class="col-md-9 col-sm-9 col-xs-12">{topics.title}</p>
-			<p class="col-md-3 col-sm-3 hidden-xs" id="eta-{topics.tid}"></p>
-		</a>
-		<script type="text/javascript">
-			var Date{topics.tid} = {topics.date};
-			setInterval(function(){
-				if(Date{topics.tid} > 0){
-					document.getElementById("eta-{topics.tid}").innerHTML = msToTime(Date{topics.tid} - Date.now())
-				}
-			}, 1000);
-		</script>
-	</li>
-<!-- END topics -->
-</ul>
+<!-- IF topics.length --><div class="panel panel-default">
+	<div class="panel-heading">OP Timers:</div>
+	<div class="panel-body">
+		<ul class="ops">
+		<!-- BEGIN topics -->
+			<li class="row <!-- IF topics.important -->important<!-- ENDIF topics.important -->" >
+				<a href="{relative_path}/topic/{topics.slug}">
+					<p class="col-md-9 col-sm-9 col-xs-12">{topics.title}</p>
+					<p class="col-md-3 col-sm-3 hidden-xs" id="eta-{topics.tid}"></p>
+				</a>
+				<script type="text/javascript">
+					var Date{topics.tid} = {topics.date};
+					setInterval(function(){
+						if(Date{topics.tid} > 0){
+							document.getElementById("eta-{topics.tid}").innerHTML = msToTime(Date{topics.tid} - Date.now())
+						}
+					}, 1000);
+				</script>
+			</li>
+		<!-- END topics -->
+		</ul>
+	</div>
+</div>
+<!-- ENDIF topics.length -->
 <script type="text/javascript">
 	function msToTime(duration) {
 		var milliseconds = parseInt((duration%1000)/100)

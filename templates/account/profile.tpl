@@ -5,7 +5,7 @@
 		<h1 class="fullname"><!-- IF fullname -->{fullname}<!-- ELSE -->{username}<!-- ENDIF fullname --></h1>
 		<h2 class="username"><!-- IF !banned -->@{username}<!-- ELSE -->[[user:banned]]<!-- ENDIF !banned --></h2>
 		<!-- IF isSelf -->
-		<h2 class="text-center"><a href="{config.relative_path}/token/" target="_top" type="button" class="btn btn-success btn-lg">Set Auth token</a></h2>
+		<h2 class="text-center"><a href="{config.relative_path}/token/" target="_top" type="button" class="btn btn-success btn-lg">Sync Auth</a></h2>
 		<!-- ENDIF isSelf -->
 
 		<!-- IF aboutme -->
