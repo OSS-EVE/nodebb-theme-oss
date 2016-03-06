@@ -56,7 +56,7 @@
 					cid: widget.data.cid,
 					uid: widget.uid,
 					set: 'cid:' + widget.data.cid + ':tids',
-					reverse: false,
+					reverse: true,
 					start: 0,
 					stop: widget.data.numTopics ? widget.data.numTopics : 5
 				}, function(err, data) {
@@ -76,11 +76,12 @@
 
 					var modifiedTopics = []
 					data.topics.forEach(function(entry) {
-						if(entry.title.split(" ").reverse()[0] == "!"){
+						if(entry.title.slice(-1) == "!"){
 							entry.important = true;
-							entry.title = entry.title.slice(0, -1);
+							entry.title = entry.title.slice(17, -1);
 						}
 						else
+						        entry.title = entry.title.slice(17);
 							entry.important = false;
 						try{
 							entry.date = (entry.slug && !isNaN(extractDate(entry.slug))) ? extractDate(entry.slug).getTime() : 0;
