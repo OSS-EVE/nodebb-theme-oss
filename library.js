@@ -42,13 +42,13 @@
 	Widget.renderOssOpsWidget = function(widget, callback) {
 		function extractDate(slug){
 			var tmp = slug.split("/")[1].split("-")
-			return new Date(
+			return new Date(Date.UTC(
 				tmp[0],
 				tmp[1]-1,
 				tmp[2],
 				tmp[3],
 				tmp[4]
-			);
+			));
 		}
 		privileges.categories.get(widget.data.cid, widget.uid, function(err, data) {
 			if(data.read){
@@ -80,14 +80,19 @@
 							entry.important = true;
 							entry.title = entry.title.slice(17, -1);
 						}
-						else
+						else {
 						        entry.title = entry.title.slice(17);
 							entry.important = false;
+                                                }
 						try{
 							entry.date = (entry.slug && !isNaN(extractDate(entry.slug))) ? extractDate(entry.slug).getTime() : 0;
 						}
 						catch(err) {
 							entry.date = 0;
+						}
+						if (entry.date) {
+						  entry.dateUTC=new Date(entry.date).toUTCString().replace("GMT","EVE");
+						  entry.dateTZ=new Date(entry.date).toString();
 						}
 						if(modifiedTopics.length < (widget.data.numTopics ? widget.data.numTopics : 5)&&
 							  entry.date > Date.now())
